@@ -19,7 +19,7 @@ Split! works by using math voodoo to divide your total betting spend across ever
 See demo.js for a full example. See 'Run the demo' above for how to run the demo with nodejs
 ```javascript
 //Create a new instance of split
-var split = new split.Split(100); // pass Split the total amount you want to spend on the event.
+var split = new Split(100); // pass Split the total amount you want to spend on the event.
 
 // Add each competitor to the event, with their ID and Odds
 split.addItem(1, 51);   // SNOW SKY (16)
