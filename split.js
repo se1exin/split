@@ -34,6 +34,14 @@ SplitItem.prototype.calcBet = function(bet, spend) {
     this.profit = this.result - spend;
 };
 
+/**
+ * function print
+ *  Helper function to print (console.log) the outcome of this competitor
+ */
+SplitItem.prototype.print = function(bet, spend) {
+    console.log('('+ this.id + ') Bet: $' +  this.bet.toFixed(2) + ', Win: $' + this.result.toFixed(2) + ', Less Bet: $' + this.resultLessBet.toFixed(2) + ', Profit: $' + this.profit.toFixed(2));
+};
+
 
 /**
  * class Split

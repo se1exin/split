@@ -2,8 +2,11 @@ var split = require('./split');
 
 // Based on Melbourne Cup 2015
 // http://www.races.com.au/melbourne-cup/melbourne-cup-history/facts-and-statistics/
-var split = new split.Split(100);
 
+//Create a new instance of split
+var split = new split.Split(100); // pass Split the total amount you want to spend on the event.
+
+// Add each competitor to the event, with their ID and Odds
 split.addItem(1, 51);   // SNOW SKY (16)
 split.addItem(2, 19);   // CRITERION (4)
 split.addItem(3, 5);    // FAME GAME (12)
@@ -29,17 +32,18 @@ split.addItem(22, 21);  // THE UNITED STATES (3)
 split.addItem(23, 34);  // EXCESS KNOWLEDGE (24)
 split.addItem(24, 41);  // GUST OF WIND (19)
 
+console.log('Juggling fire, please wait..');
 // Perform Split! calculation
 var results = split.gamble();
 
 // Print the results
 for(var i in results) {
-  console.log('('+ results[i].id + ') Bet: $' +  results[i].bet.toFixed(2) + ', Win: $' + results[i].result.toFixed(2) + ', Less Bet: $' + results[i].resultLessBet.toFixed(2) + ', Profit: $' + results[i].profit.toFixed(2));
+  results[i].print();
 }
 
-// Will the group of best actually profit??
+// Will the group of bets actually profit??
 if(split.winning()) {
-  console.log('Congrats! All bets will win.');
+  console.log('\r\nCongrats! All bets will win.');
 } else {
-  console.log('Bugger! Odds aren\'t in your favour.. try removing some outliers.');
+  console.log('\r\nBugger! Odds aren\'t in your favour.. try removing some outliers.');
 }
