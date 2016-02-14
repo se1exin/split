@@ -82,7 +82,7 @@ Split.prototype.resetSplits = function() {
 
 /**
  * function highestItemIndex
- *  Finds the competitor than that currently has the best/highest profit
+ *  Finds the competitor that currently has the best/highest profit
  *  
  * @return int - The index of the highest paying competitor from the this.items array
  */
@@ -99,8 +99,8 @@ Split.prototype.highestItemIndex = function() {
 };
 
 /**
- * function lowestItemIndex]
- *  Finds the competitor than that currently has the worst/lowest profit
+ * function lowestItemIndex
+ *  Finds the competitor that currently has the worst/lowest profit
  *  
  * @return int - The index of the lowest paying competitor from the this.items array
  */
@@ -119,7 +119,7 @@ Split.prototype.lowestItemIndex = function() {
 
 /**
  * function gamble
- *  Magic voodoo snakecharmerthat figures out how much to bet on each competitor to get the best possible betting results
+ *  Magic voodoo snakeoil that figures out how much to bet on each competitor to get the best possible betting results
  *  
  * @return Array - All competitors (as class SplitItem) with their calculated betting results 
  */
@@ -127,8 +127,8 @@ Split.prototype.gamble = function() {
     /**
      * gamble() works by looping and looping and looping all competitors until it has calculated the best possible betting outcome.
      * This is essentially achieved by moving cents ($0.01) from the least deserving competitor (that with the highest/best profit)
-     * to the most deserving competitor (that with the lowest/worst profit) over and over again until all comptitors have the equal-est
-     * distribution of the total spend.
+     * to the most deserving competitor (that with the lowest/worst profit) over and over again until all comptitors have the fairest
+     * (and most profitable) distribution of the total spend.
      */
     
     // How many times we need to loop - Total spend, divided by the $ amount to be moved between competitors, times the accumulative total of odds
@@ -144,9 +144,9 @@ Split.prototype.gamble = function() {
 
 /**
  * function winning
- *  Convenience function for determining if the return from betting on this event is more than the total spend
+ *  Convenience function for determining if the $ win from betting on all competitors on this event will be more than the total spend on the event
  * 
- * @return Boolean - True/False to if the betting results will actually make money on this event
+ * @return Boolean - True/False if the betting results will actually make money on this event
  */
 Split.prototype.winning = function() {
     for(var i=0;i<this.items.length;i++) {
