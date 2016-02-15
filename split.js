@@ -158,6 +158,4 @@ Split.prototype.winning = function() {
 };
 
 // Exports for nodejs
-module.exports = {
-    Split: Split
-};
+module.exports = Split;
