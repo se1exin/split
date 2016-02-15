@@ -1,10 +1,10 @@
-var split = require('./split');
+var Split = require('./split');
 
 // Based on Melbourne Cup 2015
 // http://www.races.com.au/melbourne-cup/melbourne-cup-history/facts-and-statistics/
 
 //Create a new instance of split
-var split = new split.Split(100); // pass Split the total amount you want to spend on the event.
+var split = new Split(100); // pass Split the total amount you want to spend on the event.
 
 // Add each competitor to the event, with their ID and Odds
 split.addItem(1, 51);   // SNOW SKY (16)
